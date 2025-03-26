@@ -1,0 +1,44 @@
+{
+	"schemaVersion": 1,
+	"id": "bandit-craft",
+	"version": "1.0.0",
+	"name": "Bandit Craft",
+	"description": "This mod adds bandit to minecraft!",
+	"authors": [
+		"Kernel"
+	],
+	"contact": {
+		"homepage": "https://github.com/kernelxdev",
+		"sources": "https://github.com/kernelxdev/Bandit-Craft"
+	},
+	"license": "MIT",
+	"icon": "assets/bandit-craft/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.kernel.BanditCraft"
+		],
+		"client": [
+			"net.kernel.BanditCraftClient"
+		],
+		"fabric-datagen": [
+			"net.kernel.BanditCraftDataGenerator"
+		]
+	},
+	"mixins": [
+		"bandit-craft.mixins.json",
+		{
+			"config": "bandit-craft.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.10",
+		"minecraft": "~1.21.5",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
